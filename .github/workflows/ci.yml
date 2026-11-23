@@ -1,0 +1,52 @@
+# Chủ: Nam. Chạy trên mọi PR và mọi lần push lên main. PR có dấu ✗ đỏ thì KHÔNG merge.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  web:
+    name: Web (lint + build trên mock)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_USE_MOCK: "1"
+
+  api:
+    name: Lambda (unit test)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/lambda-analyze
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/lambda-analyze/package-lock.json
+      - run: npm ci
+      - run: npm test
+
+  contract:
+    name: Hợp đồng (schema, mock, prompt sinh ra)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python ai/scripts/build_prompt.py --check
+      - run: python ai/scripts/check_contract.py
+      - name: Extension (cú pháp)
+        run: for f in extension/*.js; do node --check "$f"; done
