@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Chủ: Văn. Giao diện sáng cố định cho demo; đổi bảng màu ở đây. */
+:root {
+  --background: #ffffff;
+  --foreground: #18181b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-be-vietnam);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-be-vietnam), system-ui, sans-serif;
+}

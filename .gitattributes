@@ -1,0 +1,8 @@
+# Cả nhóm dùng cả Windows lẫn macOS: lưu LF trong repo để diff không đỏ cả file vì xuống dòng.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.ico binary
+*.png binary
+*.jpg binary
+*.pptx binary
+*.pdf binary
