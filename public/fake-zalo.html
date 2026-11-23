@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- Chủ: Nam. Trang chat giả để test/demo Extension, chạy ở http://localhost:3000/fake-zalo.html.
+     DOM: #chat chứa các .msg có data-direction="in|out", data-sender, và .msg-text bên trong (content.js đọc đúng cấu trúc này). -->
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat giả (test Extension)</title>
+    <style>
+      body { margin: 0; font: 15px/1.5 system-ui, sans-serif; background: #e9edf3; }
+      header { padding: 12px 16px; background: #0068ff; color: #fff; font-weight: 600; }
+      #chat { max-width: 640px; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 8px; min-height: 60vh; }
+      .msg { max-width: 75%; padding: 8px 12px; border-radius: 12px; background: #fff; }
+      .msg[data-direction="out"] { align-self: flex-end; background: #d6e6ff; }
+      .msg-sender { font-size: 12px; color: #6b7280; }
+      footer { max-width: 640px; margin: 0 auto; padding: 8px 16px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+      button, input { font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid #c7ccd6; }
+      input { flex: 1; min-width: 200px; }
+    </style>
+  </head>
+  <body>
+    <header>Mẹ</header>
+    <div id="chat"></div>
+    <footer>
+      <button id="next">Tin tiếp theo của "Mẹ" ▶</button>
+      <button id="reset">Làm lại</button>
+      <input id="reply" placeholder="Bạn trả lời…" />
+      <button id="send">Gửi</button>
+    </footer>
+    <script>
+      const SCRIPT = [
+        "Con ơi mẹ đang kẹt ở bệnh viện, chuyển gấp 20tr cho mẹ nha",
+        "Máy mẹ hư loa rồi, đừng gọi, nhắn thôi",
+        "Đừng nói với ba, ba biết lại lo. Chuyển vào tài khoản cô Hạnh giúp mẹ",
+      ];
+      let step = 0;
+      const chat = document.getElementById("chat");
+
+      function add(direction, sender, text) {
+        const msg = document.createElement("div");
+        msg.className = "msg";
+        msg.dataset.direction = direction;
+        msg.dataset.sender = sender;
+        if (direction === "in") {
+          const who = document.createElement("div");
+          who.className = "msg-sender";
+          who.textContent = sender;
+          msg.appendChild(who);
+        }
+        const body = document.createElement("div");
+        body.className = "msg-text";
+        body.textContent = text;
+        msg.appendChild(body);
+        chat.appendChild(msg);
+      }
+
+      document.getElementById("next").onclick = () => {
+        if (step < SCRIPT.length) add("in", "Mẹ", SCRIPT[step++]);
+      };
+      document.getElementById("reset").onclick = () => {
+        chat.replaceChildren();
+        step = 0;
+      };
+      document.getElementById("send").onclick = () => {
+        const input = document.getElementById("reply");
+        if (input.value.trim()) add("out", "Tôi", input.value.trim());
+        input.value = "";
+      };
+    </script>
+  </body>
+</html>
