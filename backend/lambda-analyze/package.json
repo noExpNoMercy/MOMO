@@ -1,0 +1,20 @@
+{
+  "name": "lambda-analyze",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AWS Lambda cho POST /analyze (A9) và POST /m3 (M3). Xem docs/tracks/.",
+  "main": "index.mjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "dev": "node --env-file-if-exists=.env dev_server.mjs",
+    "try": "node --env-file-if-exists=.env try_engine.mjs",
+    "eval": "node --env-file-if-exists=.env ../../ai/scripts/run_eval.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0"
+  }
+}
