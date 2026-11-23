@@ -31,7 +31,8 @@ Mỗi người làm **độc lập** trên phần của mình. Không ai phải 
 
 ## 2. Chạy trên máy trong 10 phút
 
-Cần: **Node.js ≥ 22**, **Git**. Riêng Khánh cần thêm **Python ≥ 3.10**.
+Cần: **Node.js ≥ 22.9** (khuyên dùng bản 24 LTS; kiểm bằng `node -v`), **Git**. Riêng Khánh cần thêm **Python ≥ 3.10**.
+Node cũ hơn thì `npm run setup:api` báo lỗi `EBADENGINE`: cài Node mới ở https://nodejs.org rồi chạy lại.
 
 ```bash
 git clone https://github.com/noExpNoMercy/MOMO.git

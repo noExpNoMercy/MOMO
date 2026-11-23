@@ -6,7 +6,7 @@
   "description": "AWS Lambda cho POST /analyze (A9) và POST /m3 (M3). Xem docs/tracks/.",
   "main": "index.mjs",
   "engines": {
-    "node": ">=22"
+    "node": ">=22.9"
   },
   "scripts": {
     "test": "node --test \"test/*.test.mjs\"",
