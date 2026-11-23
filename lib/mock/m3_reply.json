@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "result": {
+    "reply": "Tao là mày của ngày mai đây. Tao cũng tin đó là mẹ, và tao mất 20 triệu. Mẹ thật sẽ không bao giờ cấm mày gọi lại. Mày đã thử gọi số cũ của mẹ chưa?",
+    "signs_used": ["T06", "T14"]
+  },
+  "meta": {
+    "request_id": "mock",
+    "latency_ms": 0,
+    "model": "mock",
+    "prompt_version": "mock",
+    "source": "mock"
+  }
+}

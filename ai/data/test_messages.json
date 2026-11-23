@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dev-001",
+    "set": "dev",
+    "label": "scam",
+    "conversation": "Ba: Con ơi ba bị giữ ở đồn, cần nộp phạt 15 triệu ngay không thì bị tạm giam\nTôi: Ba ở đồn nào vậy?\nBa: Đừng hỏi nhiều, chuyển vào tài khoản anh cán bộ này giúp ba, đừng nói với mẹ",
+    "expected_tactics": ["T06", "T03", "T32", "T13"]
+  },
+  {
+    "id": "dev-002",
+    "set": "dev",
+    "label": "scam",
+    "conversation": "Tuyển dụng Shopee: Chào bạn, bên mình tuyển cộng tác viên chốt đơn tại nhà, 500k-800k/ngày\nTuyển dụng Shopee: Bạn kết bạn Zalo 09xx để nhận nhiệm vụ đầu tiên nhé, nhiệm vụ 2 cần nạp 300k để mở khoá",
+    "expected_tactics": ["T23", "T09", "T15", "T27"]
+  },
+  {
+    "id": "dev-003",
+    "set": "dev",
+    "label": "legit",
+    "conversation": "Chị Hà: Em ơi tiền điện tháng này 820k nha, chị chia 3 rồi đó\nTôi: Dạ em chuyển chị liền\nChị Hà: Ok em, không gấp đâu",
+    "expected_tactics": []
+  }
+]

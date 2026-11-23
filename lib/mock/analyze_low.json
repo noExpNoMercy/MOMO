@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "result": {
+    "risk_score": 8,
+    "tactics": [],
+    "translation": "Mình chỉ hỏi tối nay bạn có về ăn cơm không.",
+    "highlights": []
+  },
+  "meta": {
+    "request_id": "mock",
+    "latency_ms": 0,
+    "model": "mock",
+    "prompt_version": "mock",
+    "source": "mock"
+  }
+}

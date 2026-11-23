@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "result": {
+    "risk_score": 92,
+    "tactics": [
+      {
+        "id": "T06",
+        "name": "Giả danh người thân",
+        "group": "B",
+        "evidence": "Con ơi mẹ đang kẹt ở bệnh viện",
+        "explanation": "Mạo nhận là người bạn tin nhất để bạn bỏ qua bước kiểm tra."
+      },
+      {
+        "id": "T14",
+        "name": "Cắt kênh xác minh",
+        "group": "C",
+        "evidence": "Máy mẹ hư loa rồi, đừng gọi",
+        "explanation": "Chặn đúng cách duy nhất giúp bạn phát hiện người nhắn không phải mẹ."
+      },
+      {
+        "id": "T01",
+        "name": "Áp lực thời gian",
+        "group": "A",
+        "evidence": "chuyển gấp 20tr",
+        "explanation": "Tạo cảm giác phải làm ngay để bạn không kịp suy nghĩ hay hỏi lại."
+      },
+      {
+        "id": "T13",
+        "name": "Yêu cầu giữ bí mật",
+        "group": "C",
+        "evidence": "Đừng nói với ba",
+        "explanation": "Cắt bạn khỏi người có thể cảnh báo bạn."
+      }
+    ],
+    "translation": "Tôi muốn bạn chuyển 20 triệu ngay, không gọi kiểm tra và không cho ai biết, để bạn không kịp phát hiện tôi không phải mẹ bạn.",
+    "highlights": [
+      { "text": "Con ơi mẹ đang kẹt ở bệnh viện", "tactic_id": "T06" },
+      { "text": "Máy mẹ hư loa rồi, đừng gọi", "tactic_id": "T14" },
+      { "text": "nhắn thôi", "tactic_id": "T14" },
+      { "text": "chuyển gấp 20tr", "tactic_id": "T01" },
+      { "text": "Đừng nói với ba", "tactic_id": "T13" }
+    ]
+  },
+  "meta": {
+    "request_id": "mock",
+    "latency_ms": 0,
+    "model": "mock",
+    "prompt_version": "mock",
+    "source": "mock"
+  }
+}

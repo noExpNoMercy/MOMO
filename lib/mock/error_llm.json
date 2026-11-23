@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "error": {
+    "code": "LLM_ERROR",
+    "message": "mock: Anthropic API timeout after 12000ms"
+  },
+  "meta": {
+    "request_id": "mock"
+  }
+}

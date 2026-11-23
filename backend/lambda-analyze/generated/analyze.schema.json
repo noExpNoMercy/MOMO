@@ -1,0 +1,166 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "risk_score",
+    "tactics",
+    "translation",
+    "highlights"
+  ],
+  "properties": {
+    "risk_score": {
+      "type": "integer",
+      "description": "Mức nguy hiểm 0-100. 0-49 chưa đủ dấu hiệu, 50-69 nghi ngờ, 70-84 nguy hiểm, 85-100 gần như chắc chắn lừa đảo."
+    },
+    "tactics": {
+      "type": "array",
+      "description": "Tối đa 6 thủ thuật có bằng chứng trong hội thoại, nguy hiểm nhất đứng đầu. Không thấy thì để mảng rỗng.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "group",
+          "evidence",
+          "explanation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "T01",
+              "T02",
+              "T03",
+              "T04",
+              "T05",
+              "T06",
+              "T07",
+              "T08",
+              "T09",
+              "T10",
+              "T11",
+              "T12",
+              "T13",
+              "T14",
+              "T15",
+              "T16",
+              "T17",
+              "T18",
+              "T19",
+              "T20",
+              "T21",
+              "T22",
+              "T23",
+              "T24",
+              "T25",
+              "T26",
+              "T27",
+              "T28",
+              "T29",
+              "T30",
+              "T31",
+              "T32",
+              "T33",
+              "T34",
+              "T35",
+              "T36",
+              "T37",
+              "T38",
+              "T39",
+              "T40"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Trích NGUYÊN VĂN một cụm trong hội thoại, không sửa chữ, không thêm dấu."
+          },
+          "explanation": {
+            "type": "string",
+            "description": "Một câu nói với 'bạn', giải thích vì sao chiêu này hiệu quả. Tối đa 160 ký tự."
+          }
+        }
+      }
+    },
+    "translation": {
+      "type": "string",
+      "description": "Dịch ý đồ thật của người gửi, ngôi thứ nhất ('Tôi...'), tối đa 200 ký tự. Không mở đầu bằng 'Câu này nghĩa là'. Luôn có nội dung, kể cả khi hội thoại bình thường."
+    },
+    "highlights": {
+      "type": "array",
+      "description": "Tối đa 10 cụm cần tô màu. Mỗi cụm trích NGUYÊN VĂN từ hội thoại và gắn với một thủ thuật có trong tactics.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "tactic_id"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "tactic_id": {
+            "type": "string",
+            "enum": [
+              "T01",
+              "T02",
+              "T03",
+              "T04",
+              "T05",
+              "T06",
+              "T07",
+              "T08",
+              "T09",
+              "T10",
+              "T11",
+              "T12",
+              "T13",
+              "T14",
+              "T15",
+              "T16",
+              "T17",
+              "T18",
+              "T19",
+              "T20",
+              "T21",
+              "T22",
+              "T23",
+              "T24",
+              "T25",
+              "T26",
+              "T27",
+              "T28",
+              "T29",
+              "T30",
+              "T31",
+              "T32",
+              "T33",
+              "T34",
+              "T35",
+              "T36",
+              "T37",
+              "T38",
+              "T39",
+              "T40"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

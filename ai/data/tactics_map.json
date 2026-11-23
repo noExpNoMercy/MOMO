@@ -1,0 +1,242 @@
+[
+  {
+    "id": "T01", "name": "Áp lực thời gian", "group": "A",
+    "description": "Ép nạn nhân làm ngay, không cho thời gian suy nghĩ hay hỏi lại.",
+    "signals": ["gấp", "ngay", "liền", "trong 5 phút", "không kịp"],
+    "example_vi": "Chuyển liền giúp chị nha, trễ là hỏng việc đó"
+  },
+  {
+    "id": "T02", "name": "Hạn chót giả", "group": "A",
+    "description": "Đặt ra mốc thời gian bịa để tạo áp lực.",
+    "signals": ["trước 17h", "hôm nay là hạn cuối", "hết hạn"],
+    "example_vi": "Hồ sơ của anh sẽ bị huỷ nếu không hoàn tất trước 17h hôm nay"
+  },
+  {
+    "id": "T03", "name": "Đe doạ hậu quả", "group": "A",
+    "description": "Doạ khoá tài khoản, bị bắt, bị phạt, mất quyền lợi nếu không làm theo.",
+    "signals": ["khoá tài khoản", "bị bắt", "bị phạt", "truy tố"],
+    "example_vi": "Nếu không xác minh, tài khoản của quý khách sẽ bị khoá vĩnh viễn"
+  },
+  {
+    "id": "T04", "name": "Khan hiếm giả", "group": "A",
+    "description": "Nói suất, hàng, ưu đãi sắp hết để thúc quyết định.",
+    "signals": ["suất cuối", "chỉ còn", "số lượng có hạn"],
+    "example_vi": "Chỉ còn 2 suất nhận thưởng thôi em, chốt luôn không người khác lấy"
+  },
+  {
+    "id": "T05", "name": "Leo thang dần", "group": "A",
+    "description": "Xin ít trước rồi tăng dần số tiền hoặc yêu cầu.",
+    "signals": ["thêm chút nữa", "lần cuối", "bù thêm"],
+    "example_vi": "Lúc nãy 500k rồi, giờ chỉ cần thêm 2 triệu nữa là rút được hết"
+  },
+  {
+    "id": "T06", "name": "Giả danh người thân", "group": "B",
+    "description": "Mạo nhận là cha mẹ, con cái, anh chị em hoặc bạn thân để được tin ngay.",
+    "signals": ["con ơi", "mẹ đây", "anh đây", "số mới của mẹ"],
+    "example_vi": "Mẹ đây con, mẹ mượn máy cô Lan nhắn, con chuyển giúp mẹ ít tiền"
+  },
+  {
+    "id": "T07", "name": "Giả danh cơ quan nhà nước", "group": "B",
+    "description": "Mạo danh công an, toà án, viện kiểm sát, thuế, bảo hiểm xã hội.",
+    "signals": ["công an", "toà án", "lệnh bắt", "điều tra"],
+    "example_vi": "Tôi là cán bộ công an quận, anh đang liên quan đường dây rửa tiền"
+  },
+  {
+    "id": "T08", "name": "Giả danh ngân hàng/CSKH", "group": "B",
+    "description": "Mạo danh nhân viên ngân hàng hoặc tổng đài chăm sóc khách hàng.",
+    "signals": ["CSKH", "nhân viên ngân hàng", "tổng đài", "nâng hạn mức"],
+    "example_vi": "Vietcombank thông báo: thẻ của quý khách cần cập nhật thông tin"
+  },
+  {
+    "id": "T09", "name": "Giả danh ví điện tử/sàn TMĐT", "group": "B",
+    "description": "Mạo danh ví điện tử, sàn thương mại điện tử, đơn vị giao hàng.",
+    "signals": ["ví của bạn", "shop", "đơn hàng lỗi", "shipper"],
+    "example_vi": "Đơn hàng của bạn bị lỗi thanh toán, bấm link để nhận lại tiền"
+  },
+  {
+    "id": "T10", "name": "Giả danh sếp/đồng nghiệp", "group": "B",
+    "description": "Mạo nhận là cấp trên hoặc đồng nghiệp để ra lệnh chuyển tiền.",
+    "signals": ["sếp đây", "anh đang họp", "chuyển giúp anh cho đối tác"],
+    "example_vi": "Anh đang họp không nghe máy được, em chuyển giúp anh 30 triệu cho đối tác"
+  },
+  {
+    "id": "T11", "name": "Thuật ngữ chuyên môn gây choáng", "group": "B",
+    "description": "Dùng từ ngữ pháp lý, kỹ thuật, tài chính khó hiểu để nạn nhân không dám hỏi lại.",
+    "signals": ["xác thực sinh trắc", "phong toả", "định danh mức 2", "mã hồ sơ"],
+    "example_vi": "Tài khoản của chị chưa định danh mức 2 nên bị treo theo thông tư mới"
+  },
+  {
+    "id": "T12", "name": "Mượn uy tín bên thứ ba", "group": "B",
+    "description": "Đưa ra số hiệu, tên cán bộ, logo, tên công ty lớn để tạo vẻ chính thống.",
+    "signals": ["số hiệu", "mã cán bộ", "theo công văn", "đối tác của"],
+    "example_vi": "Tôi là cán bộ Nguyễn Văn A, số hiệu 123456, anh có thể kiểm tra"
+  },
+  {
+    "id": "T13", "name": "Yêu cầu giữ bí mật", "group": "C",
+    "description": "Dặn không được kể với ai, kể cả người nhà.",
+    "signals": ["đừng nói với ai", "giữ bí mật", "đừng cho ba biết"],
+    "example_vi": "Chuyện này đang điều tra, anh tuyệt đối không được nói với vợ"
+  },
+  {
+    "id": "T14", "name": "Cắt kênh xác minh", "group": "C",
+    "description": "Ngăn nạn nhân gọi lại hoặc kiểm tra qua kênh khác.",
+    "signals": ["đừng gọi", "máy hư", "không nghe máy được", "chỉ nhắn thôi"],
+    "example_vi": "Máy chị hư loa rồi, em đừng gọi, cứ nhắn tin thôi"
+  },
+  {
+    "id": "T15", "name": "Kéo sang kênh riêng", "group": "C",
+    "description": "Dụ chuyển sang Telegram, Zalo phụ, nhóm kín, link riêng.",
+    "signals": ["kết bạn Zalo", "vào Telegram", "nhóm kín", "nhắn riêng"],
+    "example_vi": "Em kết bạn Zalo số này để chị hướng dẫn riêng nha"
+  },
+  {
+    "id": "T16", "name": "Tạo khủng hoảng để tự xử lý một mình", "group": "C",
+    "description": "Dựng tình huống khẩn cấp khiến nạn nhân nghĩ phải tự giải quyết, không kịp hỏi ai.",
+    "signals": ["chỉ có em giúp được", "không ai khác biết", "phải xử lý ngay"],
+    "example_vi": "Chỉ có con giúp được ba lúc này, đừng làm ầm lên"
+  },
+  {
+    "id": "T17", "name": "Gây sợ hãi", "group": "D",
+    "description": "Tạo nỗi sợ trực tiếp cho bản thân nạn nhân.",
+    "signals": ["nguy hiểm", "sẽ bị", "hậu quả nghiêm trọng"],
+    "example_vi": "Nếu anh không hợp tác, anh sẽ bị tạm giam ngay trong hôm nay"
+  },
+  {
+    "id": "T18", "name": "Đánh vào lo lắng cho người thân", "group": "D",
+    "description": "Nói người thân đang gặp nạn, cấp cứu, bị bắt để nạn nhân hoảng.",
+    "signals": ["cấp cứu", "tai nạn", "đang ở bệnh viện", "con chị bị"],
+    "example_vi": "Con chị bị tai nạn, đang cấp cứu, cần đóng viện phí ngay"
+  },
+  {
+    "id": "T19", "name": "Gây cảm giác tội lỗi", "group": "D",
+    "description": "Khiến nạn nhân thấy có lỗi nếu nghi ngờ hoặc từ chối.",
+    "signals": ["bạn bè mà", "có vậy cũng hỏi", "không tin tao à"],
+    "example_vi": "Chơi với nhau bao lâu mà mượn chút tiền cũng hỏi han"
+  },
+  {
+    "id": "T20", "name": "Lòng tham", "group": "D",
+    "description": "Hứa hẹn lợi ích lớn, dễ dàng, vượt xa bình thường.",
+    "signals": ["lãi cao", "x2 tài khoản", "kiếm tiền dễ"],
+    "example_vi": "Bỏ vào 1 triệu, cuối ngày rút về 3 triệu, bao lời"
+  },
+  {
+    "id": "T21", "name": "Tình cảm lãng mạn", "group": "D",
+    "description": "Xây dựng quan hệ yêu đương qua mạng rồi xin tiền.",
+    "signals": ["anh yêu em", "gửi quà cho em", "mình về chung nhà"],
+    "example_vi": "Anh gửi quà về cho em rồi, em đóng giúp anh phí hải quan nha"
+  },
+  {
+    "id": "T22", "name": "Gợi lòng thương hại", "group": "D",
+    "description": "Kể hoàn cảnh khó khăn, đáng thương để xin giúp đỡ.",
+    "signals": ["hoàn cảnh khó khăn", "không còn ai", "giúp em với"],
+    "example_vi": "Em không còn ai để nhờ, con em đang đói, giúp em với"
+  },
+  {
+    "id": "T23", "name": "Việc nhẹ lương cao", "group": "E",
+    "description": "Mời làm việc đơn giản, tại nhà, thu nhập cao bất thường.",
+    "signals": ["việc nhẹ lương cao", "làm tại nhà", "cộng tác viên"],
+    "example_vi": "Việc nhẹ tại nhà, chỉ cần điện thoại, 500k-1tr mỗi ngày"
+  },
+  {
+    "id": "T24", "name": "Trúng thưởng/quà tặng", "group": "E",
+    "description": "Báo trúng thưởng, nhận quà, tri ân khách hàng.",
+    "signals": ["trúng thưởng", "quà tri ân", "may mắn được chọn"],
+    "example_vi": "Chúc mừng bạn trúng iPhone trong chương trình tri ân"
+  },
+  {
+    "id": "T25", "name": "Hoàn tiền/hoàn phí", "group": "E",
+    "description": "Hứa hoàn tiền đơn hàng, hoàn phí bảo hiểm, hoàn thuế.",
+    "signals": ["hoàn tiền", "hoàn phí", "hoàn thuế", "bồi thường"],
+    "example_vi": "Bên em hoàn lại 2 triệu tiền đơn lỗi, chị cho em xin số thẻ"
+  },
+  {
+    "id": "T26", "name": "Đầu tư cam kết lãi", "group": "E",
+    "description": "Mời đầu tư với lợi nhuận cam kết, không rủi ro.",
+    "signals": ["cam kết lãi", "không rủi ro", "chuyên gia dẫn dắt"],
+    "example_vi": "Đầu tư theo chuyên gia, cam kết lãi 30% một tháng"
+  },
+  {
+    "id": "T27", "name": "Nhiệm vụ nạp tiền nhận hoa hồng", "group": "E",
+    "description": "Giao nhiệm vụ like, đánh giá, đặt đơn ảo rồi bắt nạp tiền để nhận hoa hồng.",
+    "signals": ["làm nhiệm vụ", "nạp để mở khoá nhiệm vụ", "hoa hồng"],
+    "example_vi": "Hoàn thành nhiệm vụ 3 cần nạp 2 triệu, xong rút cả gốc lẫn hoa hồng"
+  },
+  {
+    "id": "T28", "name": "Cho vay dễ không thế chấp", "group": "E",
+    "description": "Mời vay nhanh, không cần giấy tờ, rồi đòi phí trước.",
+    "signals": ["vay nhanh", "không thế chấp", "giải ngân trong ngày"],
+    "example_vi": "Vay 50 triệu không thế chấp, giải ngân trong 30 phút"
+  },
+  {
+    "id": "T29", "name": "Có đi có lại", "group": "F",
+    "description": "Cho trước một chút lợi để sau đó đòi lại lớn hơn.",
+    "signals": ["đã gửi trước", "bên em đã chuyển", "giờ tới lượt"],
+    "example_vi": "Lần trước bên em trả hoa hồng cho chị rồi, giờ chị nạp tiếp nha"
+  },
+  {
+    "id": "T30", "name": "Cam kết nhỏ dẫn dắt", "group": "F",
+    "description": "Xin một hành động nhỏ trước rồi dẫn dần tới yêu cầu lớn.",
+    "signals": ["chỉ cần xác nhận", "bấm thử", "làm bước đầu"],
+    "example_vi": "Anh chỉ cần bấm xác nhận thông tin thôi, không mất gì đâu"
+  },
+  {
+    "id": "T31", "name": "Bằng chứng xã hội giả", "group": "F",
+    "description": "Khoe nhiều người đã tham gia, đã nhận tiền, ảnh chụp giả.",
+    "signals": ["nhiều người đã nhận", "ảnh chuyển khoản", "cả nhóm đều làm"],
+    "example_vi": "Cả nhóm 200 người rút được hết rồi, em xem ảnh nè"
+  },
+  {
+    "id": "T32", "name": "Đổi thông tin nhận tiền", "group": "F",
+    "description": "Yêu cầu chuyển vào tài khoản khác, tài khoản người lạ.",
+    "signals": ["chuyển vào tài khoản này", "số mới", "tài khoản cô", "tài khoản bạn"],
+    "example_vi": "Đừng chuyển vào số cũ, chuyển vào tài khoản bạn anh nhé"
+  },
+  {
+    "id": "T33", "name": "Tài khoản an toàn/tạm giữ", "group": "F",
+    "description": "Bắt chuyển tiền sang tài khoản an toàn, tạm giữ để kiểm tra.",
+    "signals": ["tài khoản an toàn", "tạm giữ", "chứng minh tiền sạch"],
+    "example_vi": "Anh chuyển toàn bộ số dư vào tài khoản tạm giữ để cơ quan xác minh"
+  },
+  {
+    "id": "T34", "name": "Xin OTP/mật khẩu", "group": "F",
+    "description": "Hỏi mã OTP, mật khẩu, mã PIN, thông tin thẻ.",
+    "signals": ["mã OTP", "mã xác nhận", "mật khẩu", "số CVV"],
+    "example_vi": "Hệ thống vừa gửi mã OTP, anh đọc giúp em để hoàn tất"
+  },
+  {
+    "id": "T35", "name": "Bắt cài app/mở link", "group": "F",
+    "description": "Bắt cài ứng dụng lạ, mở link, quét mã, bật điều khiển từ xa.",
+    "signals": ["cài app", "bấm link", "quét mã", "tải ứng dụng"],
+    "example_vi": "Chị tải app Dịch vụ công bản mới qua link này để cập nhật"
+  },
+  {
+    "id": "T36", "name": "Giấy tờ/chứng từ giả", "group": "F",
+    "description": "Gửi ảnh lệnh bắt, hợp đồng, biên lai, chứng từ giả để tạo niềm tin.",
+    "signals": ["lệnh bắt", "biên lai", "hợp đồng", "giấy xác nhận"],
+    "example_vi": "Đây là lệnh tạm giam có đóng dấu, anh xem kỹ đi"
+  },
+  {
+    "id": "T37", "name": "Quen thuộc giả", "group": "F",
+    "description": "Nhắc chi tiết cá nhân thật để tạo cảm giác quen biết, đáng tin.",
+    "signals": ["anh nhớ em không", "hôm trước", "biết cả tên, địa chỉ"],
+    "example_vi": "Em là bạn học cấp 3 của anh nè, lớp 12A1 đó"
+  },
+  {
+    "id": "T38", "name": "Chặn nghi ngờ trước", "group": "F",
+    "description": "Chủ động nói 'không phải lừa đảo' để vô hiệu hoá sự nghi ngờ.",
+    "signals": ["không phải lừa đảo", "yên tâm", "uy tín 100%"],
+    "example_vi": "Chị yên tâm, bên em không phải lừa đảo đâu, uy tín lâu năm rồi"
+  },
+  {
+    "id": "T39", "name": "Ép xác nhận từng bước", "group": "F",
+    "description": "Dẫn nạn nhân làm theo từng bước, đòi xác nhận liên tục để không kịp dừng lại.",
+    "signals": ["làm theo em", "xong bước này chưa", "báo em khi xong"],
+    "example_vi": "Giờ chị mở app, bấm chuyển khoản, xong báo em bước tiếp"
+  },
+  {
+    "id": "T40", "name": "Phí mở khoá/phí thủ tục", "group": "F",
+    "description": "Bắt đóng phí, thuế, phí mở khoá để được nhận tiền hoặc rút tiền.",
+    "signals": ["phí mở khoá", "phí thủ tục", "đóng thuế để rút"],
+    "example_vi": "Tài khoản đang treo, chị đóng 3 triệu phí mở khoá là rút được"
+  }
+]
