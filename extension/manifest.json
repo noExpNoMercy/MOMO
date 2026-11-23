@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "3 Lớp Lá Chắn: Radar Thao Túng",
+  "version": "0.1.0",
+  "description": "Đọc tin nhắn mới trên trang chat, gọi A9 Radar và cảnh báo khi phát hiện thủ thuật thao túng.",
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "host_permissions": [
+    "http://localhost:8787/*",
+    "https://*.amazonaws.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:3000/fake-zalo.html", "https://*.amplifyapp.com/fake-zalo.html"],
+      "js": ["config.js", "content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

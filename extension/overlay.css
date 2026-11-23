@@ -1,0 +1,21 @@
+/* Chủ: Nam. Mọi id/class đều có tiền tố llc- để không đụng CSS của trang chat. */
+#llc-overlay {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  width: min(380px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fff;
+  color: #18181b;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  font: 14px/1.5 system-ui, sans-serif;
+  border-left: 6px solid #f59e0b;
+}
+#llc-overlay.llc-danger { border-left-color: #f97316; }
+#llc-overlay.llc-critical { border-left-color: #dc2626; }
+#llc-overlay .llc-head { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+#llc-overlay .llc-close { border: 0; background: none; font-size: 20px; cursor: pointer; line-height: 1; }
+#llc-overlay .llc-translation { margin: 8px 0; font-weight: 600; }
+#llc-overlay .llc-tactics { margin: 0; padding-left: 18px; color: #3f3f46; }
