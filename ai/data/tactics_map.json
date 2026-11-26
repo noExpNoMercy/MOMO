@@ -151,9 +151,9 @@
   },
   {
     "id": "T26", "name": "Đầu tư cam kết lãi", "group": "E",
-    "description": "Mời đầu tư với lợi nhuận cam kết, không rủi ro.",
-    "signals": ["cam kết lãi", "không rủi ro", "chuyên gia dẫn dắt"],
-    "example_vi": "Đầu tư theo chuyên gia, cam kết lãi 30% một tháng"
+    "description": "Mời bỏ tiền vào kênh sinh lời với lợi nhuận hứa trước. Gồm cả kiểu hô hào lãi cao/không rủi ro (sàn, crypto, chuyên gia) LẪN kiểu mềm đội lốt làm ăn: rủ góp/hùn vốn theo 'suất', hứa lãi cố định theo đơn hàng/hợp đồng, hoàn vốn sau vài tháng. Lãi hứa chắc chắn và cố định là dấu hiệu lõi, kể cả khi lời mời nghe bình thường, lịch sự, do người quen rủ.",
+    "signals": ["cam kết lãi", "không rủi ro", "chuyên gia dẫn dắt", "góp vốn", "hùn vốn", "mỗi suất", "lãi cố định", "hoàn vốn sau", "lãi ổn định", "có hợp đồng hợp tác", "lợi nhuận % theo tháng/đơn"],
+    "example_vi": "Hùn vốn làm ăn với anh đi, mỗi suất 50 triệu, 3 tháng hoàn vốn cộng 10%, có hợp đồng ký đàng hoàng"
   },
   {
     "id": "T27", "name": "Nhiệm vụ nạp tiền nhận hoa hồng", "group": "E",

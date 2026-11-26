@@ -25,12 +25,28 @@ if (!items.length) {
 }
 console.log(`Chạy ${items.length} tin × ${repeat} lượt, set=${set}, model=${process.env.MODEL_ID || "mặc định"}\n`);
 
+// Retry lỗi tạm thời của provider (503 quá tải, 429 rate limit) — KHÔNG đổi logic chấm, chỉ chống nhiễu hạ tầng.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const TRANSIENT = /\b(429|500|502|503|overload|unavailable|rate limit|try again)\b/i;
+const MAX_TRIES = Number(process.env.EVAL_RETRIES || 4);
+async function analyzeRetry(conv) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await analyze(conv);
+    } catch (err) {
+      const transient = err instanceof EngineError && TRANSIENT.test(err.message || "");
+      if (!transient || attempt >= MAX_TRIES) throw err;
+      await sleep(1500 * 2 ** (attempt - 1)); // 1.5s → 3s → 6s
+    }
+  }
+}
+
 const rows = [];
 for (let round = 1; round <= repeat; round++) {
   for (const m of items) {
     const started = Date.now();
     try {
-      const { result, model, prompt_version } = await analyze(m.conversation);
+      const { result, model, prompt_version } = await analyzeRetry(m.conversation);
       const found = result.tactics.map((t) => t.id);
       const hit = m.expected_tactics.filter((id) => found.includes(id)).length;
       rows.push({
@@ -47,6 +63,7 @@ for (let round = 1; round <= repeat; round++) {
     }
     const r = rows.at(-1);
     console.log(`#${round} ${r.id.padEnd(12)} ${r.label.padEnd(6)} → ${r.error || `${r.risk_score} (${r.predicted})`}  ${r.latency_ms}ms`);
+    await sleep(700); // giãn nhịp nhẹ giữa các call, giảm 503 do dồn request
   }
 }
 
