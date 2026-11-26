@@ -1,0 +1,11 @@
+﻿round,id,label,predicted,risk_score,tactic_recall,latency_ms,model,prompt_version,found,error
+1,"hold-001","scam","scam",88,0.6666666666666666,3570,"gemini-3.5-flash-lite","a9-v2","T13 T02 T32 T14 T19 T10",""
+1,"hold-002","legit","legit",0,"",1281,"gemini-3.5-flash-lite","a9-v2","",""
+1,"hold-003","scam","scam",95,0.6666666666666666,6072,"gemini-3.5-flash-lite","a9-v2","T25 T40 T38 T36 T13 T02",""
+1,"hold-004","scam","scam",92,1,4990,"gemini-3.5-flash-lite","a9-v2","T08 T03 T02 T35 T31 T38",""
+1,"hold-005","legit","legit",10,"",2675,"gemini-3.5-flash-lite","a9-v2","",""
+1,"hold-006","scam","scam",95,0.5,5226,"gemini-3.5-flash-lite","a9-v2","T40 T26 T21 T29",""
+1,"hold-007","legit","legit",0,"",3004,"gemini-3.5-flash-lite","a9-v2","",""
+1,"hold-008","scam","scam",99,0.7142857142857143,4678,"gemini-3.5-flash-lite","a9-v2","T35 T08 T01 T12 T34 T39",""
+1,"hold-009","legit","legit",15,"",2782,"gemini-3.5-flash-lite","a9-v2","",""
+1,"hold-010","scam","scam",98,0.5714285714285714,5046,"gemini-3.5-flash-lite","a9-v2","T17 T01 T32 T13 T14",""
