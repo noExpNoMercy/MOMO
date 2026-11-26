@@ -1,13 +1,14 @@
 // Đo A9 trên bộ tin mẫu bằng ĐÚNG engine chạy trên Lambda (không có bản prompt riêng cho eval).
 //   cd backend/lambda-analyze
-//   npm run eval                     → chạy set "dev"
-//   npm run eval -- --set holdout    → chạy set holdout (chỉ chạy lần cuối, số này mới lên slide)
-//   npm run eval -- --repeat 3       → lặp 3 lượt, lấy trung bình
+//   npm run eval                          → chạy set "dev" (Claude, cần ANTHROPIC_API_KEY)
+//   ENGINE=gemini npm run eval            → dùng Gemini free tier (cần GEMINI_API_KEY)
+//   npm run eval -- --set holdout         → chạy set holdout (chỉ chạy lần cuối, số này mới lên slide)
+//   npm run eval -- --repeat 3            → lặp 3 lượt, lấy trung bình
 // Kết quả: in bảng ra màn hình + ghi ai/results/eval_<set>_<thời gian>.csv
-// Cần ANTHROPIC_API_KEY (backend/lambda-analyze/.env). Mỗi lượt tốn tiền thật, xem số tin trước khi chạy.
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { analyze, EngineError } from "../../backend/lambda-analyze/engine.mjs";
+const engineFile = process.env.ENGINE === "gemini" ? "engine.gemini.mjs" : "engine.mjs";
+const { analyze, EngineError } = await import(`../../backend/lambda-analyze/${engineFile}`);
 
 const RISK_ALERT = 50; // đồng bộ với lib/config.ts: ≥ 50 tính là "lừa đảo"
 
