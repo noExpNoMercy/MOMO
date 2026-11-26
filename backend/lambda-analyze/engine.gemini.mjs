@@ -18,7 +18,7 @@ const M3_SCHEMA = JSON.parse(read("m3.schema.json"));
 const VERSIONS = JSON.parse(read("prompt_versions.json"));
 const TACTIC_MAP = loadTacticMap(JSON.parse(read("tactics.json")));
 
-export const DEFAULT_MODEL = "gemini-2.0-flash"; // free tier, nhanh
+export const DEFAULT_MODEL = "gemini-3.5-flash-lite"; // free tier, nhanh (2.0-flash deprecated)
 
 export class EngineError extends Error {
   constructor(code, message, options) {
