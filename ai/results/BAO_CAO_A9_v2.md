@@ -44,7 +44,29 @@
 
 ---
 
-## 4. Giới hạn cần nói thật
+## 4. Lá chắn link — heuristic + model học chạy offline
+
+Ngoài phát hiện thủ thuật qua chữ, A9 có lớp phòng hộ riêng cho **link lạ**, chạy **hoàn toàn trên thiết bị, không gửi link đi đâu**:
+
+- **Tầng 1 — luật cứng (tất định):** bóc URL trong tin, gắn cờ nếu nhái tên thương hiệu (`vcb-xacthuc.top`), đuôi tên miền lạ (`.top/.vip`), file `.apk`, IP thô, hay link rút gọn.
+- **Tầng 3 — classifier học từ dữ liệu thật:** logistic regression 17 đặc trưng URL, huấn luyện trên **56k link phishing thật** (OpenPhish + Phishing.Database) + **25k domain uy tín** (Majestic). Chạy offline bằng trọng số nhúng sẵn.
+
+| Chỉ số (held-out 8.000 ca) | Kết quả |
+|---|---|
+| Accuracy | 93.8% |
+| Precision | 98.8% |
+| Recall | 88.7% |
+| AUC | 0.985 |
+
+Hai tầng **ghép lại (ensemble)** → link xấu củng cố thủ thuật "bắt cài app/mở link" → đẩy vào điểm tất định. Trên bộ test: **bắt 6/6 tin có link lừa, 0 tin thật báo oan**. Model độc lập nhận ra phishing: `vcb-xacthuc.top` 0.95, lookalike paypal `.tk` 1.0, link IP 1.0; để yên `vietcombank.com.vn` 0.30, `shopee.vn` 0.10.
+
+**Điểm mạnh cho pitch:** đây là **AI thật chạy trên máy, không gọi API bên thứ ba** — *"chúng tôi không gửi link của bạn đi đâu cả"*: vừa mạnh vừa riêng tư.
+
+**Giới hạn thật:** benign train là domain ngắn/sạch nên model tựa nhiều vào độ dài URL → ensemble chỉ cho model cờ khi xác suất ≥ 0.85, heuristic vẫn là chính; dữ liệu phishing phần lớn toàn cầu; model offline cũ dần, cần train lại định kỳ. *(Tầng 2 — tra threat-intel realtime như Safe Browsing — để ở roadmap vì cần gọi dịch vụ ngoài.)*
+
+---
+
+## 5. Giới hạn cần nói thật
 
 - Vẫn là **proxy Haiku trên máy**, chưa đo qua Lambda/API production (latency, prompt cache). Bước sau: khi có key live, chạy `npm run eval` để lấy số production đầy đủ.
 - **Tactic recall 91% là chỉ số phụ** (đo "gọi đủ tên thủ thuật"), KHÔNG phải độ chính xác phát hiện. Phân loại scam/legit — cái quyết định có bảo vệ người dùng hay không — đạt **100%**. Phần recall thiếu chủ yếu là các thủ thuật khuếch đại trọng số thấp (áp lực/hạn chót) và dao động ngẫu nhiên của model nhỏ, **không đổi phân loại**.
@@ -53,7 +75,7 @@
 
 ---
 
-## 5. Số liệu bối cảnh (cho slide "quy mô vấn đề", có nguồn)
+## 6. Số liệu bối cảnh (cho slide "quy mô vấn đề", có nguồn)
 
 - **2024:** người Việt mất **~18.900 tỷ đồng** vì lừa đảo trực tuyến (Hiệp hội An ninh mạng quốc gia); cứ **220 người có 1 nạn nhân**; chỉ **45,69%** nạn nhân báo cơ quan chức năng.
 - **2025:** Bộ Công an ghi nhận **~4.200 vụ**, thiệt hại **~6.000 tỷ** (11 tháng đầu năm); chặn **hơn 55 triệu** cuộc gọi quốc tế giả mạo.
@@ -64,6 +86,6 @@
 
 ---
 
-## 6. Câu chốt cho slide
+## 7. Câu chốt cho slide
 
-> A9 không chỉ "gọi API". Nó phát hiện thủ thuật thao túng bằng LLM, rồi **tự chấm điểm bằng công thức minh bạch** — nên điểm số **tái lập được và cãi được**, không phải hộp đen. Trên bộ dữ liệu **mô phỏng vụ lừa thật, giữ kín**, nó phân loại **đúng 100%, không báo oan lần nào, lặp 3 lượt không sai**.
+> A9 không chỉ "gọi API". Nó phát hiện thủ thuật thao túng bằng LLM, rồi **tự chấm điểm bằng công thức minh bạch** — nên điểm số **tái lập được và cãi được**, không phải hộp đen. Trên bộ dữ liệu **mô phỏng vụ lừa thật, giữ kín**, nó phân loại **đúng 100%, không báo oan lần nào, lặp 3 lượt không sai**. Riêng link lừa, có **model học chạy ngay trên máy** chặn lại — không gửi link của bạn đi đâu.
