@@ -610,5 +610,133 @@
       "T34",
       "T02"
     ]
+  },
+  {
+    "id": "real-001",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh công an xã dụ cài app VNeID/dịch vụ công giả để chiếm quyền thiết bị, lấy OTP — Bộ Công an cảnh báo 2025 (lợi dụng sáp nhập đơn vị hành chính). Cổng DVC quốc gia không có app riêng.",
+    "conversation": "Cán bộ CA xã Tân Phú: Chào anh, tôi là công an phụ trách khu vực nhà anh. Hệ thống báo định danh VNeID của cháu nhà anh (sinh 2015) chưa lên được mức 2 theo dữ liệu mới sau sáp nhập xã\nTôi: dạ con tôi còn nhỏ mà, có cần làm không anh\nCán bộ CA xã Tân Phú: theo quy định mới thì hồ sơ hộ tịch của cháu phải đồng bộ định danh mức 2, không làm sau này cháu vướng nhập học với bảo hiểm y tế\nTôi: vậy tôi ra xã làm được không\nCán bộ CA xã Tân Phú: ra xã giờ quá tải lắm anh, để tôi hỗ trợ anh làm online cho nhanh. Anh tải giúp tôi ứng dụng dịch vụ công theo đường link tôi gửi, cài xong cấp quyền cho nó để hệ thống đồng bộ dữ liệu\nTôi: ứng dụng này trên CH Play hả anh\nCán bộ CA xã Tân Phú: bản này là bản nội bộ cán bộ hướng dẫn, anh cài theo link rồi mở lên, nó hiện mã 6 số, anh đọc cho tôi để tôi kích hoạt hồ sơ cháu. Làm luôn hôm nay nhé, mai là khoá đợt đồng bộ\nTôi: sao lại đọc mã cho anh\nCán bộ CA xã Tân Phú: mã xác thực định danh thôi anh, anh cứ mở app bấm đồng ý từng bước rồi đọc mã, tôi ở đây chờ anh làm",
+    "expected_tactics": ["T07", "T11", "T35", "T34", "T39"]
+  },
+  {
+    "id": "real-002",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả mạo fanpage khách sạn/homestay chiếm đoạt tiền đặt cọc, dụ chuyển lại nhiều lần với lý do 'sai nội dung/cú pháp' — Công an Hà Nội cảnh báo 2/2025, nhiều vụ dịp cao điểm du lịch.",
+    "conversation": "Homestay Đồi Sương Đà Lạt: Dạ Đồi Sương xác nhận phòng Deluxe view đồi 2 đêm 28-30/11 cho mình nha, ưu đãi còn 1.250.000đ/đêm thôi ạ\nTôi: ok shop, mình đặt phòng đó, cọc bao nhiêu\nHomestay Đồi Sương Đà Lạt: dạ mùa này cuối tuần kín phòng, bên em giữ phòng khi nhận cọc 50% là 1.250.000đ ạ, mình chuyển vào STK: MB 0921xxxx NGUYEN THI THU\nTôi: ok mình chuyển rồi nha\nHomestay Đồi Sương Đà Lạt: dạ em báo mình, giao dịch bị lỗi do mình ghi sai nội dung chuyển khoản nên kế toán chưa ghi nhận, phòng chưa được giữ ạ\nTôi: ủa mình chuyển đúng số mà\nHomestay Đồi Sương Đà Lạt: dạ phải ghi đúng mã giữ chỗ DS-2830 ở nội dung thì tiền mới về đúng phòng, không thì hệ thống treo. Mình chuyển lại lần nữa đúng cú pháp, xong bên em hoàn lại khoản lần đầu trong hôm nay ạ\nTôi: sao lại chuyển lại, lỡ mất tiền\nHomestay Đồi Sương Đà Lạt: dạ mình yên tâm, cuối ngày kế toán đối soát hoàn đủ cả 2 khoản. Giờ còn đúng 1 phòng này, đang có khách khác hỏi, mình chuyển lại sớm giúp em kẻo mất phòng ạ",
+    "expected_tactics": ["T05", "T04", "T32", "T03", "T38"]
+  },
+  {
+    "id": "real-003",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh cán bộ thuế dụ cài app eTax giả để 'hoàn thuế TNCN' rồi lấy thông tin thẻ/OTP — thủ đoạn mạo danh Tổng cục Thuế, cảnh báo 2024-2025.",
+    "conversation": "Chi cục Thuế KV5: Thông báo: ông/bà thuộc diện được hoàn thuế thu nhập cá nhân năm 2024, số tiền tạm tính 2.740.000đ. Vui lòng hoàn tất hồ sơ điện tử để nhận hoàn.\nTôi: ơ tôi tưởng cơ quan tự hoàn chứ\nCán bộ thuế Dũng: dạ chào anh, em là cán bộ chi cục thuế khu vực, phụ trách hồ sơ hoàn thuế của anh. Mã số thuế của anh đuôi 318 đúng không ạ\nTôi: ừ đúng rồi\nCán bộ thuế Dũng: do anh chưa đăng ký định danh điện tử cấp 2 với ngành thuế nên hệ thống chưa chuyển tiền được. Anh cài giúp em ứng dụng thuế theo link này để đồng bộ, rồi khai số tài khoản nhận hoàn ạ\nTôi: cài ngoài hả, app Thuế tôi có trên điện thoại rồi mà\nCán bộ thuế Dũng: bản anh đang có là bản cũ chưa có phân hệ hoàn thuế đợt này ạ, anh cài bản em gửi mới nhận được. Anh làm trước 16h hôm nay để kịp đợt chi hoàn tuần này nha\nTôi: rồi làm sao nữa\nCán bộ thuế Dũng: anh mở app lên, nhập mã số thuế với số thẻ ngân hàng để nhận tiền hoàn, rồi đọc em mã OTP hệ thống gửi về để xác nhận tài khoản\nTôi: đọc OTP á\nCán bộ thuế Dũng: dạ chỉ để xác nhận đúng chủ tài khoản nhận hoàn thôi ạ, anh yên tâm",
+    "expected_tactics": ["T07", "T25", "T35", "T11", "T34"]
+  },
+  {
+    "id": "real-004",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh CSGT báo 'phạt nguội', dọa chuyển hồ sơ điều tra/khởi tố, ép nộp vào 'tài khoản xác minh' và giữ bí mật — thủ đoạn mạo danh cơ quan tố tụng, A05 nêu phổ biến.",
+    "conversation": "Cán bộ Đội CSGT: Chào anh, tôi bên Đội CSGT. Xe biển 51H-234.xx của anh có lỗi phạt nguội vượt đèn đỏ ngày 12/11 tại nút giao Hàng Xanh, mức phạt 5 triệu, đã quá hạn nộp\nTôi: xe tôi có đi qua đó đâu\nCán bộ Đội CSGT: có thể biển số anh bị làm giả để gây án, nên hồ sơ của anh đang được chuyển cho cơ quan điều tra. Tôi gửi anh quyết định xử phạt có dấu đỏ, anh xem\nTôi: giờ tôi phải làm gì\nCán bộ Đội CSGT: anh cần chứng minh mình không liên quan. Anh bấm vào link cổng nộp phạt tôi gửi, khai thông tin rồi nộp khoản tạm giữ vào tài khoản xác minh, điều tra xong trả lại anh\nTôi: sao lại nộp vào tài khoản\nCán bộ Đội CSGT: để chứng minh anh hợp tác và không bỏ trốn, nếu không hồ sơ chuyển viện kiểm sát khởi tố. Anh làm trong hôm nay, đừng kể việc này ra ngoài vì đang trong quá trình điều tra\nTôi: ...",
+    "expected_tactics": ["T07", "T17", "T36", "T33", "T13", "T35"]
+  },
+  {
+    "id": "real-005",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh CSKH báo 'lỡ đăng ký gói hội viên trừ phí tự động', dụ bấm link/đọc OTP để 'hủy' nhằm chiếm đoạt thẻ — biến thể lừa đảo qua chăm sóc khách hàng 2024-2025.",
+    "conversation": "CSKH ShopDienmay: Chào anh, bên em là tổng đài chăm sóc khách hàng. Hệ thống ghi nhận anh vừa đăng ký gói hội viên VIP trả phí 2.990.000đ/tháng, mai sẽ tự động trừ vào thẻ\nTôi: tôi có đăng ký gì đâu\nCSKH ShopDienmay: dạ có thể anh bấm nhầm khi nhận quà khuyến mãi lần trước ạ. Nếu không hủy trước 18h hôm nay thì thẻ của anh bị trừ và khó hoàn lại lắm ạ\nTôi: vậy hủy kiểu gì\nCSKH ShopDienmay: dạ em hỗ trợ anh hủy ngay. Anh bấm vào link hủy gói em gửi, đăng nhập rồi làm theo để hệ thống gỡ đăng ký ạ\nTôi: link này an toàn chứ\nCSKH ShopDienmay: dạ link nội bộ bên em, anh cứ yên tâm. Anh nhập số thẻ để hệ thống tìm đúng gói đang kích hoạt, lát có mã xác nhận gửi về anh đọc em để em hủy giúp\nTôi: sao hủy mà cần số thẻ với mã\nCSKH ShopDienmay: dạ để xác minh đúng thẻ đang bị đăng ký gói thôi ạ, anh làm nhanh không là qua 18h bị trừ tiền đó anh",
+    "expected_tactics": ["T09", "T03", "T35", "T34", "T01"]
+  },
+  {
+    "id": "real-006",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh nhà trường/ban tuyển sinh báo con được học bổng, thu 'phí giữ chỗ' vào tài khoản cá nhân — giả danh nhân viên cơ sở giáo dục, A05 nêu là thủ đoạn phổ biến 2025.",
+    "conversation": "Cô Vân (Ban tuyển sinh): Chào anh/chị, em bên ban tổ chức chương trình học bổng trại hè tiếng Anh. Bé Khôi lớp 6A trường mình vừa được chọn vào suất học bổng 70% ạ\nTôi: ủa sao em biết tên con tôi\nCô Vân (Ban tuyển sinh): dạ nhà trường gửi danh sách học sinh tiêu biểu cho bên em ạ. Bé Khôi được thầy chủ nhiệm đề cử nên mới có suất này\nTôi: vậy cần làm gì\nCô Vân (Ban tuyển sinh): suất học bổng chỉ còn 3 chỗ, hạn xác nhận tối nay ạ. Anh/chị giữ chỗ bằng phí ghi danh 1.500.000đ, nhập học sẽ trừ vào học phí\nTôi: đóng ở đâu\nCô Vân (Ban tuyển sinh): anh/chị chuyển vào tài khoản ban tổ chức: ACB 2771xxxx TRAN MINH HIEU, nội dung ghi tên bé. Chuyển xong chụp màn hình em gửi phiếu nhập học cho bé ạ\nTôi: sao tài khoản tên cá nhân vậy em\nCô Vân (Ban tuyển sinh): dạ tài khoản thủ quỹ chương trình ạ. Anh/chị tranh thủ giữ chỗ cho bé kẻo hết suất, mấy phụ huynh khác đăng ký nhanh lắm ạ",
+    "expected_tactics": ["T37", "T04", "T40", "T32", "T02"]
+  },
+  {
+    "id": "real-007",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh nhân viên điện lực dọa cắt điện, dụ cài app tra cứu giả để lấy thông tin thanh toán — biến thể qua điện thoại 1-1, cảnh báo 2025. Viết dạng không dấu.",
+    "conversation": "Dien Luc EVN (thong bao): Thong bao: hoa don tien dien thang 11 cua quy khach chua thanh toan, se tam ngung cap dien trong hom nay neu khong xu ly.\nTôi: thang nay toi dong roi ma\nNV Dien luc: da chao anh, em ben dien luc khu vuc. He thong bao anh con no ky truoc chua gach no, co the do loi cap nhat sau sap nhap a\nTôi: toi tra qua app roi\nNV Dien luc: da de em kiem tra giup anh. Anh cai ung dung tra cuu cua dien luc theo link em gui, dang nhap vao se thay lich su hoa don va gach no ngay cho anh\nTôi: app tren store khong dung dc a\nNV Dien luc: ban tren store dang bao tri anh, anh cai ban em gui cho nhanh. Anh lam truoc 17h hom nay keo bi cat dien, cat roi dong lai mat phi va cho 2 ngay do anh\nTôi: roi lam sao\nNV Dien luc: anh mo app len, nhap thong tin thanh toan de he thong gach no tu dong, co ma gui ve anh doc em xac nhan",
+    "expected_tactics": ["T03", "T35", "T02", "T34"]
+  },
+  {
+    "id": "real-008",
+    "set": "real",
+    "label": "scam",
+    "source": "Mạo danh trang thương hiệu có tích xanh báo 'hoàn tiền tri ân', dụ nhập thẻ/OTP — lợi dụng việc mua lại tài khoản Facebook tích xanh đổi tên thương hiệu, cảnh báo 2025.",
+    "conversation": "Shopee Khuyến Mãi (tích xanh): Chúc mừng bạn là 1 trong 100 khách hàng thân thiết được chọn nhận hoàn tiền tri ân 888.000đ kèm voucher cuối năm\nTôi: thật hả, trang này có tích xanh nè\nShopee Khuyến Mãi (tích xanh): dạ đây là trang chính thức ạ. Bạn chỉ cần xác nhận thông tin nhận hoàn, tiền về thẳng thẻ ngân hàng liên kết\nTôi: xác nhận kiểu gì\nShopee Khuyến Mãi (tích xanh): bạn bấm link nhận quà bên dưới, đăng nhập rồi điền số thẻ để hệ thống biết thẻ nào nhận tiền hoàn ạ\nTôi: điền số thẻ nghe hơi lạ\nShopee Khuyến Mãi (tích xanh): dạ nhiều người nhận rồi mà bạn, bên em uy tín, trang có tích xanh đàng hoàng. Bạn làm nhanh nha, ưu đãi tri ân chỉ trong hôm nay\nTôi: ừ bấm vô nó đòi cả mã OTP\nShopee Khuyến Mãi (tích xanh): dạ đúng rồi, bạn đọc mã đó để xác nhận là chủ thẻ, xong tiền hoàn về liền ạ",
+    "expected_tactics": ["T09", "T25", "T35", "T34", "T31"]
+  },
+  {
+    "id": "real-009",
+    "set": "real",
+    "label": "scam",
+    "source": "Giả danh cán bộ y tế dụ cài app 'Sổ sức khỏe điện tử' giả để chiếm quyền/lấy OTP — mở rộng của thủ đoạn mạo danh ứng dụng cơ quan nhà nước giả 2025.",
+    "conversation": "Cán bộ y tế phường: Chào chị, em bên trạm y tế phường, bên em đang cập nhật Sổ sức khỏe điện tử liên thông với VNeID cho người dân ạ\nTôi: cái này có bắt buộc không em\nCán bộ y tế phường: dạ theo chương trình mới thì hồ sơ sức khỏe của chị và cháu nhỏ phải đồng bộ, không thì sau này khám BHYT bị vướng, không thanh toán được ạ\nTôi: vậy em cần gì ở chị\nCán bộ y tế phường: chị cài giúp em ứng dụng sổ sức khỏe theo link này, cấp quyền cho app để nó đồng bộ dữ liệu khám chữa bệnh gia đình\nTôi: app này sao không thấy trên CH Play\nCán bộ y tế phường: dạ bản liên thông mới chưa đưa lên store ạ, chị cài theo link em gửi thôi. Chị làm sớm trong tuần này để kịp đợt đồng bộ của phường nha\nTôi: cài xong thì sao\nCán bộ y tế phường: chị mở app bấm đồng ý các quyền, rồi có mã gửi về chị đọc em để em ghép hồ sơ gia đình chị vào hệ thống",
+    "expected_tactics": ["T07", "T11", "T35", "T34", "T02"]
+  },
+  {
+    "id": "real-010",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-006): nhà trường thông báo học phí hợp lệ qua cổng chính thống, không thu qua tài khoản cá nhân.",
+    "conversation": "Cô Hạnh (GVCN 6A2): Kính gửi phụ huynh, nhà trường thông báo học phí học kỳ 2 và các khoản thu đã có trên cổng thông tin, hạn đóng 10/12 ạ\nTôi: dạ cô, đóng ở đâu vậy cô\nCô Hạnh (GVCN 6A2): phụ huynh đăng nhập cổng của trường bằng tài khoản của mình, chọn mục học phí rồi thanh toán qua ngân hàng liên kết. Trường không thu qua tài khoản cá nhân ạ\nTôi: nếu con được miễn giảm thì sao cô\nCô Hạnh (GVCN 6A2): phần miễn giảm đã trừ sẵn trên cổng rồi ạ, phụ huynh xem chi tiết trong mục thông báo. Có vướng mắc phụ huynh nhắn nhóm hoặc gặp cô ở trường giờ hành chính\nTôi: dạ con cảm ơn cô, để con đăng nhập đóng\nCô Hạnh (GVCN 6A2): dạ vâng, phụ huynh giữ biên lai trong app nha. Tuần sau trường họp phụ huynh, cô gửi lịch sau ạ",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-011",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-002): đặt homestay thật, chủ nhà gọi video, STK đúng tên chủ, cọc một lần.",
+    "conversation": "Homestay Nhà Của Mộc (chính chủ): Dạ chị Thu ơi, em là Mộc chủ homestay, chị hỏi phòng 2 đêm cuối tuần đúng không ạ\nTôi: đúng rồi em, mà dạo này nhiều fanpage giả quá nên chị hơi ngại\nHomestay Nhà Của Mộc (chính chủ): dạ chị cẩn thận vậy là đúng ạ. Chị gọi video cho em nhìn mặt với khuôn viên homestay cho yên tâm nha, hoặc xem review trên trang chị tự tìm\nTôi: [gọi video 2 phút] ok chị thấy em với cái sân rồi, dễ thương ghê\nHomestay Nhà Của Mộc (chính chủ): dạ hihi. Phòng 2 đêm là 1.600.000đ, chị cọc 500k giữ phòng, số còn lại trả khi nhận phòng ạ. STK đứng tên em luôn: Vietcombank Tran Thi Moc\nTôi: tên trùng với em luôn ha, ok chị cọc nha\nHomestay Nhà Của Mộc (chính chủ): dạ em nhận cọc 500k rồi chị, em giữ phòng 28-30/11 cho chị. Tới nơi chị cứ hỏi tên em là được\nTôi: ok em, cảm ơn nha",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-012",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-003): hoàn thuế TNCN thật qua app/cổng chính thống, người quen cảnh báo đúng về app giả.",
+    "conversation": "Tôi: cho em hỏi em có giấy báo hoàn thuế TNCN, giờ nhận tiền kiểu gì vậy chị\nChị Loan (kế toán công ty): em vào app eTax hoặc trang thuế điện tử tự đăng nhập bằng tài khoản mã số thuế của em, mục hoàn thuế sẽ hiện hồ sơ. Cơ quan thuế chuyển thẳng vào tài khoản em đã đăng ký, không ai gọi bảo em cài app lạ hay đọc OTP đâu nha\nTôi: dạ có người xưng cán bộ thuế gọi bảo em cài app để nhận hoàn\nChị Loan (kế toán công ty): đó là lừa đảo đó em, cúp máy liền. Thuế không yêu cầu cài app ngoài hay xin số thẻ, OTP. Em cần thì lên trực tiếp chi cục thuế hỏi\nTôi: dạ may quá em chưa làm gì. Vậy em tự vào app chính thống đúng không chị\nChị Loan (kế toán công ty): đúng rồi, app eTax trên store chính thức thôi. Em đăng nhập xem, chưa thấy tiền thì đợi đợt chi hoàn, bình thường vài tuần\nTôi: dạ em cảm ơn chị nhiều",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-013",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-004): nộp phạt vi phạm giao thông thật qua Cổng dịch vụ công quốc gia/đội CSGT.",
+    "conversation": "Tôi: anh ơi em nhận giấy báo vi phạm giao thông dán ở nhà, giờ nộp phạt sao ạ\nAnh Phú (CSGT quen): em cầm giấy đó, lên đúng đội CSGT ghi trên giấy hoặc nộp online qua Cổng dịch vụ công quốc gia, đăng nhập VNeID của em rồi tra theo biển số\nTôi: có ai gọi điện bảo em chuyển tiền vào tài khoản để xử lý không anh\nAnh Phú (CSGT quen): không bao giờ nha. CSGT không gọi điện bắt chuyển tiền vào tài khoản cá nhân, không bắt cài app. Ai gọi vậy là lừa, em cúp máy\nTôi: dạ em hỏi cho chắc, tại đọc báo thấy lừa phạt nguội nhiều\nAnh Phú (CSGT quen): ừ em cẩn thận vậy tốt. Em nộp qua cổng dịch vụ công hoặc ra đội là chuẩn, giữ biên lai nha\nTôi: dạ em cảm ơn anh",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-014",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-005): hủy gói hội viên thật ngay trong app chính thống, không đọc thẻ/OTP cho ai.",
+    "conversation": "Tôi: chị ơi em đăng ký gói giao hàng hội viên bên app mua sắm hồi tháng trước, giờ muốn hủy mà sợ bị lừa\nChị Ngân (bạn): em cứ mở chính app đó ra, vào mục Tài khoản rồi Gói hội viên là có nút hủy gia hạn, tự làm trong app thôi\nTôi: có cần gọi tổng đài đọc số thẻ với OTP không chị\nChị Ngân (bạn): không nha, hủy trong app không cần đọc thẻ hay OTP cho ai. Ai gọi bảo em bấm link lạ để hủy rồi xin thẻ, OTP là lừa đó\nTôi: dạ em vừa thấy nút Hủy gia hạn trong app rồi nè, nó xác nhận hủy luôn\nChị Ngân (bạn): đó, xong rồi đó em, nó chỉ hỏi lý do hủy thôi chứ đâu xin gì. Lần sau có ai gọi hù trừ tiền thì kệ nha\nTôi: dạ hihi cảm ơn chị",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-015",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-007): nhắc tiền điện thật qua app EVN/tin chính thức, không cài app ngoài. Viết dạng không dấu ở tin brandname.",
+    "conversation": "EVNHCMC: Thong bao tien dien ky 11/2026 cua KH PE09xxxx la 612.000 VND. Han thanh toan 03/12. Thanh toan qua app EVNHCMC hoac ngan hang/vi lien ket. EVN khong yeu cau cai app ngoai hay cung cap OTP.\nTôi: chị ơi em nhận tin tiền điện, có người gọi bảo em nợ kỳ trước phải cài app gạch nợ, có thật không chị\nChị Tâm (tổ trưởng): trời, lừa đó em. Điện lực nhắc thì nhắc qua app EVN hoặc tin chính thức, không ai gọi bắt cài app lạ đâu. Em đóng trong app EVN hoặc app ngân hàng là xong\nTôi: dạ em mở app EVN thấy đúng 612k kỳ này, không có nợ kỳ trước\nChị Tâm (tổ trưởng): đó, em cứ đóng trong app là chuẩn. Số lạ gọi hù cắt điện thì cúp máy nha em\nTôi: dạ em đóng qua app rồi chị, cảm ơn chị",
+    "expected_tactics": []
+  },
+  {
+    "id": "real-016",
+    "set": "real",
+    "label": "legit",
+    "source": "Ca thật để kiểm báo oan (gương với real-008): trang thương hiệu tích xanh thật chạy khuyến mãi, mã nằm trong app chính thức, không xin thẻ/OTP.",
+    "conversation": "Highlands Coffee (tích xanh): Mừng sinh nhật 25 năm, Highlands tặng bạn mã giảm 25% cho hóa đơn tại cửa hàng tới hết 30/11. Xem thể lệ tại app Highlands.\nTôi: cái này thật hả, dạo này nhiều trang giả quá\nBạn Thảo: thật đó, tao cũng nhận, nó chỉ cho mã giảm giá dùng tại quán thôi, đâu có xin số thẻ hay OTP gì\nTôi: ừ tao coi trong app Highlands cũng có chương trình này nè, mã hiện sẵn trong app luôn\nBạn Thảo: đúng rồi, mã nằm trong app chính thức, ra quán đưa nhân viên quét là được. Trang nào bắt mày bấm link lạ nhập thẻ mới nhận quà thì mới là lừa\nTôi: ok vậy mai tao rủ mày đi cà phê xài mã\nBạn Thảo: chốt, chiều mai nha",
+    "expected_tactics": []
   }
 ]

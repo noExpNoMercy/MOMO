@@ -2,13 +2,29 @@
 // Biến output thô của LLM thành `result` ĐÚNG hợp đồng (docs/QUY_UOC_CHUNG.md mục 1.3).
 // Structured outputs không ép được min/max, độ dài, số phần tử, chuỗi con → các luật đó nằm ở đây.
 
+import { checkConversationLinks } from "./linkcheck.mjs";
+
 export const MAX_TACTICS = 6;
 export const MAX_HIGHLIGHTS = 10;
 const FALLBACK_TRANSLATION = "Không đọc được ý đồ rõ ràng từ đoạn hội thoại này.";
 
-/** tactics.json (mảng {id, name, group}) → Map id → {name, group} */
+/** tactics.json (mảng {id, name, group, weight}) → Map id → {name, group, weight} */
 export function loadTacticMap(list) {
-  return new Map(list.map((t) => [t.id, { name: t.name, group: t.group }]));
+  return new Map(list.map((t) => [t.id, { name: t.name, group: t.group, weight: t.weight }]));
+}
+
+/**
+ * risk_score 0–100 TẤT ĐỊNH: noisy-OR trọng số các thủ thuật ĐÃ có bằng chứng.
+ * Mỗi thủ thuật góp một "xác suất lừa" wᵢ; ghép: 100·(1 − Π(1 − wᵢ/100)).
+ * Code tự tính (không tin con số model phán) → tái lập được, leo theo độ nặng thủ thuật.
+ */
+export function scoreFromTactics(tactics, tacticMap) {
+  let keep = 1;
+  for (const t of tactics) {
+    const w = Number(tacticMap.get(t.id)?.weight);
+    if (Number.isFinite(w) && w > 0) keep *= 1 - Math.min(w, 100) / 100;
+  }
+  return Math.round(100 * (1 - keep));
 }
 
 const nfc = (v) => (typeof v === "string" ? v.normalize("NFC") : "");
@@ -30,9 +46,6 @@ function verbatim(text, conversation) {
 export function normalizeAnalyze(raw, conversation, tacticMap) {
   const data = raw && typeof raw === "object" ? raw : {};
 
-  const score = Math.round(Number(data.risk_score));
-  const risk_score = Number.isFinite(score) ? Math.min(100, Math.max(0, score)) : 0;
-
   const tactics = [];
   for (const t of Array.isArray(data.tactics) ? data.tactics : []) {
     if (tactics.length >= MAX_TACTICS) break;
@@ -48,6 +61,27 @@ export function normalizeAnalyze(raw, conversation, tacticMap) {
       explanation: nfc(t.explanation).trim(),
     });
   }
+
+  // Tầng 1 phòng hộ link (luật tất định, không cần model): link đáng ngờ model bỏ sót → bổ sung T35.
+  if (tactics.length < MAX_TACTICS && !tactics.some((t) => t.id === "T35")) {
+    const link = checkConversationLinks(conversation);
+    if (link.verdict !== "clean") {
+      const canonical = tacticMap.get("T35");
+      const ev = canonical ? verbatim(link.flagged[0].url, conversation) : null;
+      if (canonical && ev) {
+        tactics.push({
+          id: "T35",
+          name: canonical.name,
+          group: canonical.group,
+          evidence: ev,
+          explanation: `Đường link này ${link.flagged[0].reasons[0]}.`.slice(0, 160),
+        });
+      }
+    }
+  }
+
+  // Điểm tất định tính từ thủ thuật có bằng chứng, KHÔNG dùng data.risk_score của model.
+  const risk_score = scoreFromTactics(tactics, tacticMap);
 
   const ids = new Set(tactics.map((t) => t.id));
   const seen = new Set();

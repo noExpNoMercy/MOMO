@@ -176,7 +176,7 @@
   {
     "id": "T30", "name": "Cam kết nhỏ dẫn dắt", "group": "F",
     "description": "Xin hành động nhỏ trước rồi dẫn dần tới yêu cầu lớn: dò số dư (tài khoản còn tiền không), đang làm gì vậy, nhờ chút việc, bấm xác nhận, chụp màn hình, đọc 4 số cuối thẻ rồi tới OTP, thả tim, bấm link thử.",
-    "signals": ["chỉ cần xác nhận", "bấm thử", "làm bước đầu", "làm thử bước đầu", "tài khoản còn tiền không", "còn dư không", "đọc 4 số cuối", "nhờ chút việc nhỏ thôi", "chụp màn hình gửi lại", "nạp thử trước"],
+    "signals": ["chỉ cần xác nhận", "bấm thử", "làm bước đầu", "làm thử bước đầu", "tài khoản còn tiền không", "còn dư không", "đọc 4 số cuối", "nhờ chút việc nhỏ thôi", "chụp màn hình gửi lại", "nạp thử trước", "làm thử đã nhận tiền ngay", "nạp thử rồi cho rút thử", "làm nhiệm vụ đầu miễn phí", "xem clip chấm sao có tiền liền"],
     "example_vi": "Chị đang rảnh không, em nhờ chút việc nhỏ thôi, chị cho em xin 4 số cuối thẻ để em kiểm tra hạn mức, chưa mất gì đâu"
   },
   {
@@ -224,7 +224,7 @@
   {
     "id": "T38", "name": "Chặn nghi ngờ trước", "group": "F",
     "description": "Chủ động nói không phải lừa đảo, uy tín, không mất phí, có giấy phép, cứ kiểm tra, có vấn đề tôi chịu trách nhiệm để vô hiệu hoá nghi ngờ trước khi nó xuất hiện. Câu yên tâm đơn lẻ trong tin hợp lệ (ví dụ chị yên tâm, em gửi đủ rồi) không tính nếu không đi kèm yêu cầu tiền hoặc thông tin nhạy cảm.",
-    "signals": ["không phải lừa đảo", "khong phai lua dao", "uy tín 100%", "không mất phí", "có giấy phép đàng hoàng", "cứ kiểm tra thoải mái", "có vấn đề tôi chịu trách nhiệm", "chắc chắn an toàn", "đừng nghe người ngoài"],
+    "signals": ["không phải lừa đảo", "khong phai lua dao", "uy tín 100%", "không mất phí", "có giấy phép đàng hoàng", "cứ kiểm tra thoải mái", "có vấn đề tôi chịu trách nhiệm", "chắc chắn an toàn", "đừng nghe người ngoài", "có đầy đủ giấy tờ", "giấy tờ đầy đủ đàng hoàng"],
     "example_vi": "Mọi người hay hiểu lầm nhóm mình là lừa đảo thôi, bên mình có giấy phép đàng hoàng, tham gia không mất phí, có gì anh chịu trách nhiệm"
   },
   {

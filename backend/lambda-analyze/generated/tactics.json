@@ -2,201 +2,241 @@
   {
     "id": "T01",
     "name": "Áp lực thời gian",
-    "group": "A"
+    "group": "A",
+    "weight": 15
   },
   {
     "id": "T02",
     "name": "Hạn chót giả",
-    "group": "A"
+    "group": "A",
+    "weight": 15
   },
   {
     "id": "T03",
     "name": "Đe doạ hậu quả",
-    "group": "A"
+    "group": "A",
+    "weight": 22
   },
   {
     "id": "T04",
     "name": "Khan hiếm giả",
-    "group": "A"
+    "group": "A",
+    "weight": 17
   },
   {
     "id": "T05",
     "name": "Leo thang dần",
-    "group": "A"
+    "group": "A",
+    "weight": 20
   },
   {
     "id": "T06",
     "name": "Giả danh người thân",
-    "group": "B"
+    "group": "B",
+    "weight": 35
   },
   {
     "id": "T07",
     "name": "Giả danh cơ quan nhà nước",
-    "group": "B"
+    "group": "B",
+    "weight": 50
   },
   {
     "id": "T08",
     "name": "Giả danh ngân hàng/CSKH",
-    "group": "B"
+    "group": "B",
+    "weight": 42
   },
   {
     "id": "T09",
     "name": "Giả danh ví điện tử/sàn TMĐT",
-    "group": "B"
+    "group": "B",
+    "weight": 30
   },
   {
     "id": "T10",
     "name": "Giả danh sếp/đồng nghiệp",
-    "group": "B"
+    "group": "B",
+    "weight": 35
   },
   {
     "id": "T11",
     "name": "Thuật ngữ chuyên môn gây choáng",
-    "group": "B"
+    "group": "B",
+    "weight": 22
   },
   {
     "id": "T12",
     "name": "Mượn uy tín bên thứ ba",
-    "group": "B"
+    "group": "B",
+    "weight": 27
   },
   {
     "id": "T13",
     "name": "Yêu cầu giữ bí mật",
-    "group": "C"
+    "group": "C",
+    "weight": 40
   },
   {
     "id": "T14",
     "name": "Cắt kênh xác minh",
-    "group": "C"
+    "group": "C",
+    "weight": 40
   },
   {
     "id": "T15",
     "name": "Kéo sang kênh riêng",
-    "group": "C"
+    "group": "C",
+    "weight": 28
   },
   {
     "id": "T16",
     "name": "Tạo khủng hoảng để tự xử lý một mình",
-    "group": "C"
+    "group": "C",
+    "weight": 30
   },
   {
     "id": "T17",
     "name": "Gây sợ hãi",
-    "group": "D"
+    "group": "D",
+    "weight": 45
   },
   {
     "id": "T18",
     "name": "Đánh vào lo lắng cho người thân",
-    "group": "D"
+    "group": "D",
+    "weight": 35
   },
   {
     "id": "T19",
     "name": "Gây cảm giác tội lỗi",
-    "group": "D"
+    "group": "D",
+    "weight": 17
   },
   {
     "id": "T20",
     "name": "Lòng tham",
-    "group": "D"
+    "group": "D",
+    "weight": 20
   },
   {
     "id": "T21",
     "name": "Tình cảm lãng mạn",
-    "group": "D"
+    "group": "D",
+    "weight": 30
   },
   {
     "id": "T22",
     "name": "Gợi lòng thương hại",
-    "group": "D"
+    "group": "D",
+    "weight": 15
   },
   {
     "id": "T23",
     "name": "Việc nhẹ lương cao",
-    "group": "E"
+    "group": "E",
+    "weight": 35
   },
   {
     "id": "T24",
     "name": "Trúng thưởng/quà tặng",
-    "group": "E"
+    "group": "E",
+    "weight": 33
   },
   {
     "id": "T25",
     "name": "Hoàn tiền/hoàn phí",
-    "group": "E"
+    "group": "E",
+    "weight": 35
   },
   {
     "id": "T26",
     "name": "Đầu tư cam kết lãi",
-    "group": "E"
+    "group": "E",
+    "weight": 40
   },
   {
     "id": "T27",
     "name": "Nhiệm vụ nạp tiền nhận hoa hồng",
-    "group": "E"
+    "group": "E",
+    "weight": 50
   },
   {
     "id": "T28",
     "name": "Cho vay dễ không thế chấp",
-    "group": "E"
+    "group": "E",
+    "weight": 33
   },
   {
     "id": "T29",
     "name": "Có đi có lại",
-    "group": "F"
+    "group": "F",
+    "weight": 27
   },
   {
     "id": "T30",
     "name": "Cam kết nhỏ dẫn dắt",
-    "group": "F"
+    "group": "F",
+    "weight": 28
   },
   {
     "id": "T31",
     "name": "Bằng chứng xã hội giả",
-    "group": "F"
+    "group": "F",
+    "weight": 28
   },
   {
     "id": "T32",
     "name": "Đổi thông tin nhận tiền",
-    "group": "F"
+    "group": "F",
+    "weight": 42
   },
   {
     "id": "T33",
     "name": "Tài khoản an toàn/tạm giữ",
-    "group": "F"
+    "group": "F",
+    "weight": 60
   },
   {
     "id": "T34",
     "name": "Xin OTP/mật khẩu",
-    "group": "F"
+    "group": "F",
+    "weight": 55
   },
   {
     "id": "T35",
     "name": "Bắt cài app/mở link",
-    "group": "F"
+    "group": "F",
+    "weight": 45
   },
   {
     "id": "T36",
     "name": "Giấy tờ/chứng từ giả",
-    "group": "F"
+    "group": "F",
+    "weight": 33
   },
   {
     "id": "T37",
     "name": "Quen thuộc giả",
-    "group": "F"
+    "group": "F",
+    "weight": 33
   },
   {
     "id": "T38",
     "name": "Chặn nghi ngờ trước",
-    "group": "F"
+    "group": "F",
+    "weight": 30
   },
   {
     "id": "T39",
     "name": "Ép xác nhận từng bước",
-    "group": "F"
+    "group": "F",
+    "weight": 30
   },
   {
     "id": "T40",
     "name": "Phí mở khoá/phí thủ tục",
-    "group": "F"
+    "group": "F",
+    "weight": 50
   }
 ]

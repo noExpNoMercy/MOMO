@@ -8,11 +8,23 @@ const CONV = "Mẹ: Con ơi mẹ đang kẹt, chuyển gấp 20tr cho mẹ nha, 
 
 const tactic = (id, evidence, extra = {}) => ({ id, name: "tên model tự đặt", group: "Z", evidence, explanation: "x", ...extra });
 
-test("kẹp risk_score về 0–100 và làm tròn", () => {
-  assert.equal(normalizeAnalyze({ risk_score: 140 }, CONV, MAP).risk_score, 100);
-  assert.equal(normalizeAnalyze({ risk_score: -3 }, CONV, MAP).risk_score, 0);
-  assert.equal(normalizeAnalyze({ risk_score: 72.6 }, CONV, MAP).risk_score, 73);
-  assert.equal(normalizeAnalyze({ risk_score: "abc" }, CONV, MAP).risk_score, 0);
+test("risk_score tính tất định từ thủ thuật, bỏ qua con số model phán", () => {
+  // Không thủ thuật nào có bằng chứng → 0, dù model phán 140
+  assert.equal(normalizeAnalyze({ risk_score: 140 }, CONV, MAP).risk_score, 0);
+  // T06 (trọng số 35) đứng một mình → 35
+  assert.equal(
+    normalizeAnalyze({ risk_score: 5, tactics: [tactic("T06", "Con ơi mẹ đang kẹt")] }, CONV, MAP).risk_score,
+    35,
+  );
+  // T06 (35) + T13 (40): noisy-OR = round(100·(1 − 0.65·0.60)) = 61
+  assert.equal(
+    normalizeAnalyze(
+      { risk_score: 5, tactics: [tactic("T06", "Con ơi mẹ đang kẹt"), tactic("T13", "đừng nói với ba")] },
+      CONV,
+      MAP,
+    ).risk_score,
+    61,
+  );
 });
 
 test("name và group luôn lấy từ bản đồ, không tin model", () => {
@@ -91,4 +103,30 @@ test("normalizeM3 lọc signs_used theo danh sách được phép, reply rỗng 
     signs_used: ["T06"],
   });
   assert.equal(normalizeM3({ reply: "  ", signs_used: [] }, ["T06"]), null);
+});
+
+test("Tầng 1 link: chèn T35 cho link nhái thương hiệu khi model bỏ sót", () => {
+  const conv = "CSKH: xac thuc tai https://vcb-xacthuc.top truoc 18h\nTôi: ok";
+  const r = normalizeAnalyze({ risk_score: 0, tactics: [] }, conv, MAP);
+  const t35 = r.tactics.find((t) => t.id === "T35");
+  assert.ok(t35, "phải chèn T35 cho link nhái thương hiệu");
+  assert.ok(conv.includes(t35.evidence), "evidence phải là chuỗi con nguyên văn");
+  assert.ok(r.risk_score >= 40, "điểm phải phản ánh T35");
+});
+
+test("Tầng 1 link: KHÔNG chèn cho trang chính thống", () => {
+  const conv = "CSKH: tra cuu tai https://vietcombank.com.vn nhe\nTôi: ok";
+  const r = normalizeAnalyze({ risk_score: 0, tactics: [] }, conv, MAP);
+  assert.equal(r.tactics.find((t) => t.id === "T35"), undefined);
+  assert.equal(r.risk_score, 0);
+});
+
+test("Tầng 1 link: không chèn trùng khi model đã bắt T35", () => {
+  const conv = "CSKH: cai app tai http://bhxh-capnhat.com/apk nhe\nTôi: ok";
+  const r = normalizeAnalyze(
+    { risk_score: 0, tactics: [{ id: "T35", name: "x", group: "Z", evidence: "http://bhxh-capnhat.com/apk", explanation: "y" }] },
+    conv,
+    MAP,
+  );
+  assert.equal(r.tactics.filter((t) => t.id === "T35").length, 1, "không được chèn T35 lần hai");
 });

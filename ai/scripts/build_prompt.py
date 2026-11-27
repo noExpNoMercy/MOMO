@@ -168,6 +168,18 @@ def build() -> dict[str, str]:
         sys.exit(1)
 
     ids = [t["id"] for t in tactics]
+
+    weights = load_json(AI / "data/tactic_weights.json")
+    wmiss = [i for i in ids if i not in weights]
+    wextra = [k for k in weights if k not in ids]
+    if wmiss or wextra:
+        print("✗ tactic_weights.json lệch với bản đồ thủ thuật:")
+        for i in wmiss:
+            print("  - thiếu trọng số:", i)
+        for k in wextra:
+            print("  - trọng số thừa (không khớp thủ thuật nào):", k)
+        sys.exit(1)
+
     template = (AI / "prompts/a9_system.template.md").read_text(encoding="utf-8")
     if "{{TACTICS}}" not in template:
         print("✗ a9_system.template.md thiếu chỗ {{TACTICS}}")
@@ -178,7 +190,7 @@ def build() -> dict[str, str]:
         "m3_system_prompt.md": (AI / "prompts/m3_system.md").read_text(encoding="utf-8"),
         "analyze.schema.json": dump_json(analyze_schema(ids)),
         "m3.schema.json": dump_json(m3_schema(ids)),
-        "tactics.json": dump_json([{"id": t["id"], "name": t["name"], "group": t["group"]} for t in tactics]),
+        "tactics.json": dump_json([{"id": t["id"], "name": t["name"], "group": t["group"], "weight": weights[t["id"]]} for t in tactics]),
         "prompt_versions.json": dump_json(load_json(AI / "prompts/versions.json")),
     }
 
